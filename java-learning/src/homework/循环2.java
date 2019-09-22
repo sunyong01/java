@@ -1,4 +1,4 @@
-package com.company;
+package homework;
 
 public class 循环2 {
     public static void main(String[] args) {
