@@ -1,7 +1,7 @@
 package homework.complex;
 
 import java.util.Scanner;
-
+//创建一个base类型为复数
 class base{
     double x;
     double y;
@@ -10,19 +10,24 @@ class base{
         this.y=y;
     }
 }
+//方法的集合
 class complex{
+    //输入 创建复数对象
     base complexInput(){ Scanner raw =new Scanner(System.in);
         double raw_x=raw.nextDouble();
         String raw_y=raw.nextLine();
         double y=Double.parseDouble(raw_y.replace("i",""));
         return new base(raw_x,y);
     }
+    //加
     base add(base b1,base b2){
         return new base(b1.x+b2.x,b1.y+b2.y);
     }
+    //减
     base sub(base b1,base b2){
         return new base(b1.x-b2.x,b1.y-b2.y);
     }
+    //乘
     base multiply(base b1,base b2){
         /*
            a=b1.x  b=b1.y   c=b2.x  d=b2.y
@@ -32,6 +37,7 @@ class complex{
          */
         return new base((b1.x*b2.x)-(b1.y*b2.y),(b1.y*b2.x)+(b1.x*b2.y));
     }
+    //除
     base division(base b1,base b2){
         /*
          *      a=b1.x  b=b1.y   c=b2.x  d=b2.y
@@ -40,7 +46,7 @@ class complex{
          return new base((b1.x*b2.x+b1.y*b2.y)/(b2.x*b2.x+b2.y*b2.y),(b1.y*b2.x-b1.x*b2.y)/(b2.x*b2.x+b2.y*b2.y));
     }
 
-
+    //调用来print一个复数对象
     void print(base bs){
         System.out.println(bs.x+"+"+bs.y+"i");
     }
