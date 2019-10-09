@@ -43,12 +43,14 @@ class complex{
          *      a=b1.x  b=b1.y   c=b2.x  d=b2.y
          *   (a+bi)/(c+di)=(ac+bd)/(c^2+d^2) +((bc-ad)/(c^2+d^2))i
          */
-         return new base((b1.x*b2.x+b1.y*b2.y)/(b2.x*b2.x+b2.y*b2.y),(b1.y*b2.x-b1.x*b2.y)/(b2.x*b2.x+b2.y*b2.y));
+        return new base((b1.x*b2.x+b1.y*b2.y)/(b2.x*b2.x+b2.y*b2.y),(b1.y*b2.x-b1.x*b2.y)/(b2.x*b2.x+b2.y*b2.y));
     }
 
     //调用来print一个复数对象
     void print(base bs){
-        System.out.println(bs.x+"+"+bs.y+"i");
+        if(bs.y<0){  System.out.println(bs.x+""+bs.y+"i");}
+        else if(bs.y>0){  System.out.println(bs.x+"+"+bs.y+"i");}
+        else if(bs.y==0){System.out.println(bs.x);}
     }
 }
 class run{
