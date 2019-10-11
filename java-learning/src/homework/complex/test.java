@@ -13,6 +13,7 @@ class base{
 
 //方法的集合
 class complex{
+
     //输入 创建复数对象
     base complexInput(){ Scanner raw =new Scanner(System.in);
         double raw_x=raw.nextDouble();
