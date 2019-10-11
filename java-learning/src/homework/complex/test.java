@@ -10,6 +10,7 @@ class base{
         this.y=y;
     }
 }
+
 //方法的集合
 class complex{
     //输入 创建复数对象
