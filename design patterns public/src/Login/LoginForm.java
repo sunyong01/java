@@ -18,15 +18,22 @@ public class LoginForm {
      userPassword=null;
    }
 
-   static void display(){
+   static void display() throws Exception {
       Scanner scanner = new Scanner(System.in);
       System.out.println("请输入账号");
       userName=scanner.nextLine();
       System.out.println("请输入密码");
       userPassword=scanner.nextLine();
+      validate();
    }
 
-   static void validate(){
+   static void validate() throws Exception {
+      if (D.findUser(userName,userPassword)){
+         System.out.println("成功登录");
+      }else {
+         System.out.println("登陆失败，请重试！");
+         display();
+      }
 
    }
 
