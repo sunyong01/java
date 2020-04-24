@@ -26,7 +26,7 @@ public class XMLUtil {
             String cName =classNode.getNodeValue();
 
             //通过类名生成实例对象并返回
-            Class c=Class.forName("Builder." +cName);
+            Class c=Class.forName(cName);
             return c.newInstance();
 
         } catch (SAXException | ClassNotFoundException | IOException | IllegalAccessException | InstantiationException e) {

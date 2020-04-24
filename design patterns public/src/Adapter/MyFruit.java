@@ -1,4 +1,4 @@
-package Prototype;
+package Adapter;
 
 public class MyFruit implements Cloneable {
     protected String kind;

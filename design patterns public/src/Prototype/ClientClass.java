@@ -12,8 +12,17 @@ public class ClientClass {
         fruit3.Display();
         System.out.println("fruit3"+fruit3.hashCode());
         System.out.println(fruit1.equals(fruit3));
+        MyFruitStore store =new MyFruitStore();
+        store.Add(1,fruit1);
+        store.Add(2,fruit3);
+        store.Add(3,new Apple());
+        store.Add(4,new Banana());
+        MyFruit fruit =store.Get(3);
+        fruit.Display();
+        System.out.println(fruit.hashCode());
 
 
-        
+
     }
+
 }
