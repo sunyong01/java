@@ -10,5 +10,6 @@ public class ClientClass {
         fruit.PutFruit();
         fruit.Show();
 
+
     }
 }
